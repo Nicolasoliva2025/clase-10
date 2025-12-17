@@ -37,12 +37,12 @@ body {
 
 /* aside styles */
 
-aside {
+.aside {
   background-color: var(--grey-900);
   color: white;
 }
 
-aside header {
+.aside header {
   background-color: var(--grey-800);
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -52,6 +52,7 @@ aside header {
   padding: 10px;
 }
 
+/* inicio clases de perfil */
 .profile {
   display: flex;
   align-items: center;
@@ -67,11 +68,52 @@ aside header {
   font-size: 22px;
 }
 
+/* Finaliza clases de perfil */
 .actions {
   display: flex;
   justify-content: end;
   gap: 10px;
 }
+
+
+ .messages {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column ;
+  gap:20px
+ }
+
+  .message {
+    background-color: var(--grey-100);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgb(0, 0, 0.238);
+  padding: 10px;
+width: 60%; 
+ }
+
+/* Estilos diferenciados */
+.message.you {
+  align-self: flex-start;
+  background-color: white;
+}
+
+.message.me {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+}
+
+.message .time {
+  font-size: 11px;
+  color: var(--grey-700);
+  text-align: right;
+  margin-top: 4px;
+}
+
+
+
+
+
 
 .actions button {
   padding: 7px;
@@ -95,9 +137,9 @@ aside header {
 /* search input */
 .search {
   background-color: var(--grey-800);
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; */
+  align-items: center; 
   padding: 10px;
 }
 
@@ -148,7 +190,7 @@ aside header {
   grid-template-columns: 1fr;
 }
 
-aside{
+.aside{
   display: none;
 }
 
@@ -171,7 +213,7 @@ aside{
 }
 
 /*agregar estilos para los mensajes*/
-footer {
+.footer {
   display: flex;
   background-color: var(--grey-500);
   align-items: center;
@@ -180,22 +222,22 @@ footer {
   gap: 10px;
 }
 
-footer button {
+.footer button {
   width: 25px;
   height: 25px;
   padding: 3px;
 }
 
-footer svg {
+.footer svg {
   width: 100%;
   height: 100%;
 }
 
-footer form {
+.footer form {
   flex: 1;
 }
 
-footer .attach {
+.footer .attach {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -203,17 +245,17 @@ footer .attach {
   transition: color .2s;
 }
 
-footer .attach:hover {
+.footer .attach:hover {
 color: var(--grey-800);
 }
 
-footer form {
+.footer form {
   display: flex;
   align-items: center;
   flex: 1;
 }
 
-footer textarea {
+.footer textarea {
   padding: 8px;
   resize: none;
   border-radius: 15px;
@@ -221,12 +263,12 @@ footer textarea {
   border: none
 }
 
-footer textarea:focus{
+.footer textarea:focus{
   outline: 1px solid var(--grey-700)
   border none;
 }
 
-footer .send {
+.footer .send {
   background-color: #2dca7a;
   border: none;
   color: var(--green-300);
@@ -238,8 +280,7 @@ footer .send {
   transition: all .2s;
 }
 
-footer .send:hover {
+.footer .send:hover {
   background-color: #138b80;
   transform: scale(0.97);
 }
-
